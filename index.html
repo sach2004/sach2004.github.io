@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>😆😆</title>
+    <style>
+      body {
+        background-image: url("./2.jpg");
+        background-repeat: repeat;
+        position: relative;
+      }
+
+      .outer-box {
+        width: 500px;
+        height: 200px;
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        top: 300px;
+        left: 700px;
+      }
+
+      .heading h2 {
+        text-align: center;
+        padding-top: 10px;
+        color: rgb(224, 103, 126);
+      }
+      .heading h3 {
+        text-align: center;
+        padding-top: 0px;
+        margin-top: -10px;
+        color: rgb(224, 103, 126);
+      }
+
+      .button1 {
+        display: inline;
+        margin-left: 20px;
+      }
+      .button11 {
+        margin-left: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        border: 2px rgb(255, 255, 255, 0.2);
+        background-color: rgba(249, 158, 175, 255);
+      }
+      .button12 {
+        border-radius: 10px;
+        border: 2px rgb(255, 255, 255, 0.2);
+        background-color: rgba(249, 158, 175, 255);
+        position: absolute;
+        top: 135px;
+        left: 387px;
+      }
+
+      @media (max-width: 480px) {
+        .outer-box {
+          width: 500px;
+          height: 200px;
+          backdrop-filter: blur(10px);
+          border-radius: 10px;
+          border: 2px solid rgba(255, 255, 255, 0.2);
+          position: relative;
+          top: 200px;
+          left: 0px;
+        }
+      }
+
+      @media (min-width: 481px) and (max-width: 767px) {
+        .outer-box {
+          width: 500px;
+          height: 200px;
+          backdrop-filter: blur(10px);
+          border-radius: 10px;
+          border: 2px solid rgba(255, 255, 255, 0.2);
+          position: relative;
+          top: 200px;
+          left: 0px;
+        }
+      }
+
+      @media (min-width: 1025px) and (max-width: 1280px) {
+        .outer-box {
+          width: 500px;
+          height: 200px;
+          backdrop-filter: blur(10px);
+          border-radius: 10px;
+          border: 2px solid rgba(255, 255, 255, 0.2);
+          position: relative;
+          top: 200px;
+          left: 300px;
+        }
+      }
+
+      @media (min-width: 1281px) {
+        .outer-box {
+          width: 500px;
+          height: 200px;
+          backdrop-filter: blur(10px);
+          border-radius: 10px;
+          border: 2px solid rgba(255, 255, 255, 0.2);
+          position: relative;
+          top: 300px;
+          left: 700px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-box">
+      <div class="heading">
+        <h2>Do you Love Me 🥺</h2>
+        <div><h3>I Dare you to press "No" 😈😈</h3></div>
+      </div>
+
+      <div class="button1"><button class="button11">Yesss!! 😃</button></div>
+      <div class="button1"><button class="button12">No 😔</button></div>
+    </div>
+
+    <script>
+      const button = document.querySelector(".button12");
+      const button1 = document.querySelector(".button11");
+      const heading = document.querySelector(".heading h2");
+      const heading2 = document.querySelector("h3");
+
+      let count = 0;
+
+      button.addEventListener("mouseover", move);
+      button1.addEventListener("click", change);
+
+      function move() {
+        const i = Math.floor(Math.random() * 500) + 1;
+        const j = Math.floor(Math.random() * 500) + 1;
+
+        button.style.left = i + "px";
+        button.style.top = j + "px";
+      }
+
+      function change() {
+        if (count === 0) {
+          heading.innerHTML = "So We going to Travis's Concert?🥺";
+          heading2.style.visibility = "hidden";
+        } else if (count === 1) {
+          heading.innerHTML = "YAAASS I LOVE YOU TOO 😁";
+          heading2.style.visibility = "hidden";
+        }
+
+        count++;
+      }
+    </script>
+  </body>
+</html>
